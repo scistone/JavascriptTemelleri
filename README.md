@@ -505,14 +505,12 @@ function merhaba(name="Bilgi Yok",age="Bilgi Yok"){
 merhaba("Berk",22);
 
 ```
-
+---
 ```javascript
 function square(x){
-    console.log(x*x);
     return x*x;
 }
 function cube(x){
-    console.log(x*x*x);
     return x*x*x;
 }
 let a = square(12);
