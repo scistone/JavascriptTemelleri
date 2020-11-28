@@ -1,4 +1,4 @@
-# JavascriptTemelleri
+# Javascript Temelleri - Veri Tipleri, Objeler ve Operatörler
 Türkçe javascript temelleri dökümantasyonu
 
 
@@ -384,3 +384,137 @@ date1.setFullYear(year,month,date)   // üç parametre alabilir, tek argüman ve
 ```
 
 
+# Javascript Temelleri - Koşullar, Döngüler, Fonksiyonlar
+
+## Karşılaştırma Operatörleri
+```javascript
+console.log(2==2);              // true
+console.log("js"=="java");      // false
+
+console.log(2 == "2");          // true
+console.log(2 === "2");         // === ifadesi araya typeof'u da katarak sorgulama yapar bu sebeple bu işlem false çıkar.
+
+console.log(2<4);               // true
+console.log(2 != 2);            // false
+console.log(4 >= 2 );           // true
+console.log(4 <= 2 );           // false
+
+```
+
+## Mantıksal Bağlaçlar
+
+```javascript
+
+console.log(!(2!=2));
+
+console.log( (2==2) && ("Ahmet"=="Ahmet") );   // ve    operatörü   &&
+console.log( (4==2) || ("Ahmet"=="Ahmet") );   // veya  opertörü    ||
+
+```
+
+## Koşul Operatörleri
+
+```javascript
+const error = true;
+
+if (error==true){
+    console.log("Hata oluştu.");
+}
+else {
+    console.log("Hata oluşmadı.");
+}
+```
+
+başka bir örnek : 
+```javascript
+
+const user = "mmc";
+
+if (user === "mmc"){
+    console.log("Kullanıcı bulundu");
+}
+else{
+    console.log("Kullanıcı bulunamadı.");
+}
+
+```
+
+bir başka örnek daha :
+
+```javascript
+const process = 1;
+
+if (process === 1){
+    console.log("işlem 1");
+}
+else if (process === 2){
+    console.log("işlem 2");
+}
+else{
+    console.log("geçersiz işlem");
+}
+```
+
+## Ternary Operator
+
+```javascript
+const number = 100;
+console.log(number===100 ? "Sayı 100" : "Sayı 100 Değil");
+```
+
+Koşul sağlandıktan sonra işlemler tek satırlık ise süslü paranteze gerek olmadan yanına yazabilirsiniz:
+```javascript
+if (number===100) console.log("Sayı 100");
+else console.log("Sayı 100 değil");
+```
+
+## Switch Case
+```javascript
+const process = 2 ;
+
+switch(process){
+    case 1:
+        console.log("İşlem 1");
+        break;
+// breakdöngüyü kırmak için yazılır eğer break yazılmazsa, döngü kırılmaz ve aşağıdaki işleme geçer
+    case 2:
+        console.log("İşlem 2");
+        break;
+    case 3:
+        console.log("İşlem 3");
+        break;
+    case 4:
+        console.log("İşlem 4");
+        break;
+    default:
+        console.log("Geçersiz işlem");
+}
+```
+## Fonksiyonlar
+
+```javascript
+// Fonksiyon Tanımlama
+
+function merhaba(name="Bilgi Yok",age="Bilgi Yok"){
+    //if (typeof name === "undefined") name = "Bilgi Yok";
+    //if (typeof age  === "undefined") name = "Bilgi Yok";
+    console.log(`İsim: ${name} Yaş ${age}`);
+}
+
+// Fonksiyon Çağrısı
+merhaba("Berk",22);
+
+```
+
+```javascript
+function square(x){
+    console.log(x*x);
+    return x*x;
+}
+function cube(x){
+    console.log(x*x*x);
+    return x*x*x;
+}
+let a = square(12);
+a = cube(a);
+```
