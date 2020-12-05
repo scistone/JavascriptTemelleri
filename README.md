@@ -516,3 +516,113 @@ function cube(x){
 let a = square(12);
 a = cube(a);
 ```
+---
+```javascript
+const merhaba = function(name){
+    console.log("Merhaba "+name)
+}
+merhaba("Berk")
+```
+
+### Immediately Invoked Function Expression (IIFE)
+```javascript
+(function(name){
+    console.log("Merhaba: "+name);
+})("Ahmet");
+```
+---
+### Anonim Fonksiyonlar     
+```javascript
+const database = {
+    host:"localhost",
+    add: function(){
+        console.log("Eklendi.");        
+    },
+    get: function(id){
+        console.log("Elde edildi.");
+    },
+    update: function(id){
+        console.log(`Id: ${id} Güncellendi.`);
+    },
+    delete: function(id){
+        console.log(`Id: ${id} Silindi.`);
+    }
+}
+console.log(database.host);
+database.add(10);
+database.delete(10);
+```
+## Döngüler (While,Do While, For Döngüleri)
+### Basit while / do while Döngüsü
+```javascript
+let i=0;
+
+while(i<10){
+    console.log(i);
+    i++;
+}
+// Aynısının do while ile yazılışı
+do {
+   console.log(i);
+    i++; 
+}while(i<10);
+```
+---
+### for Döngüsü
+```javascript
+const langs = ["Python","Javascript","Java"];
+for (let index=0;index<langs.length;index++){
+    console.log(langs[index]);
+}
+```
+---
+### forEach
+```javascript
+const langs = ["Python","Javascript","Java"];
+langs.forEach(function(lang){ // for i in lang olduğu gibi düşünürsek 
+    console.log(lang);        
+    // i = lang, fonksiyon içerisindeki parametrenin i olduğunu düşünebiliriz.
+});
+```
+---
+```javascript
+const langs = ["Python","Javascript","Java"];
+langs.forEach(function(lang,index){ // for i in lang olduğu gibi düşünürsek 
+    console.log(lang);        
+    // i = lang, fonksiyon içerisindeki parametrenin i olduğunu düşünebiliriz.
+    // index = i'nin indexi
+});
+```
+### map fonksiyonu ile objelerde gezinmek
+```javascript
+const user = [
+    {name:"Berk",age:22},
+    {name:"Aleyna",age:23},
+];
+const names = users.map(function(user){
+    return user.name
+});
+const ages = users.map(function(user){
+    return user.age
+});
+```
+### Sözlükler üzerinde gezinmek
+```javascript
+const user = {
+    name:"Ahmet",
+    age:22,
+};
+for (let key in user){
+    value = user[key];
+    console.log(key,value);
+};
+```
+
+## Window objesi - this keyword nedir ?
+
+
+---
+## JS Scope Kavramı
+```javascript
+
+```
