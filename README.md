@@ -618,9 +618,6 @@ for (let key in user){
 };
 ```
 
-## Window objesi - this keyword nedir ?
-
-
 ---
 ## JS Scope Kavramı
 ```javascript
