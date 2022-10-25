@@ -523,7 +523,13 @@ const merhaba = function(name){
 }
 merhaba("Berk")
 ```
-
+---
+```javascript
+const merhaba = (isim) => {
+    console.log("Merhaba "+isim)
+}
+merhaba("Berk")
+```
 ### Immediately Invoked Function Expression (IIFE)
 ```javascript
 (function(name){
@@ -618,8 +624,3 @@ for (let key in user){
 };
 ```
 
----
-## JS Scope Kavramı
-```javascript
-
-```
